@@ -1,59 +1,53 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#fff1f2">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff0f4">
   <title>Chúc mừng 20/10 💗</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="petals" aria-hidden="true"></div>
-  <main class="page">
-    <header class="hero">
-      <div class="eyebrow"><span>✿</span> 20 tháng 10 <span>✿</span></div>
-      <h1>Chúc mừng<br><span>Ngày Phụ nữ Việt Nam</span></h1>
-      <p class="intro">Gửi một chút yêu thương đến những người phụ nữ tuyệt vời.</p>
-
-      <form class="wish-form" id="wishForm">
-        <label for="recipientName">Lời chúc này dành tặng ai?</label>
-        <div class="input-row">
-          <input id="recipientName" name="recipientName" type="text"
-                 placeholder="Nhập tên người nhận..." maxlength="40"
-                 autocomplete="off" required>
-          <button type="submit">Gửi lời chúc <span aria-hidden="true">♡</span></button>
-        </div>
-        <p class="form-note">Một cái tên, thật nhiều yêu thương.</p>
+  <section class="welcome" id="welcome">
+    <div class="welcome-card">
+      <div class="flower">✿</div>
+      <p class="eyebrow">MỘT MÓN QUÀ NHỎ DÀNH CHO BẠN</p>
+      <h1>Xin chào,<br><em>bạn tên là gì?</em></h1>
+      <p class="intro">Nhập tên của bạn để mở một lời chúc 20/10 thật đặc biệt nhé.</p>
+      <form id="nameForm">
+        <label for="nameInput">Tên của bạn</label>
+        <input id="nameInput" maxlength="40" placeholder="Ví dụ: Minh Anh" autocomplete="given-name" required>
+        <button type="submit">Mở lời chúc ♡</button>
       </form>
+      <p class="note">Một chút dịu dàng, gửi riêng đến bạn ✨</p>
+    </div>
+  </section>
+
+  <main id="mainPage" class="page hidden">
+    <header class="hero">
+      <p class="eyebrow">✿ 20 THÁNG 10 ✿</p>
+      <h1>Chúc mừng<br><em>Ngày Phụ nữ Việt Nam</em></h1>
+      <p class="intro">Một lời chúc nhỏ, dành riêng cho <strong id="headerName"></strong>.</p>
+      <button id="changeName" class="secondary" type="button">Đổi tên người nhận</button>
     </header>
 
-    <section class="wish-card" id="wishCard" aria-live="polite">
-      <div class="card-flower flower-left">✿</div>
-      <div class="heart">♥</div>
-      <p class="wish-kicker">Một lời nhắn nhỏ dành cho</p>
-      <h2 id="wishTitle">Bạn thật đặc biệt!</h2>
-      <p id="wishText">Chúc bạn luôn rạng rỡ, bình an và được yêu thương mỗi ngày.</p>
-      <div class="card-bottom">Gửi bạn tất cả những điều dịu dàng nhất <span>♡</span></div>
-      <div class="card-flower flower-right">✿</div>
+    <section class="wish" id="wishCard" aria-live="polite">
+      <div class="big-heart">♥</div>
+      <p class="eyebrow">GỬI ĐẾN NGƯỜI TUYỆT VỜI</p>
+      <h2 id="wishTitle">Chúc mừng 20/10!</h2>
+      <p id="wishText"></p>
+      <div class="signature">Mong những điều dịu dàng luôn tìm đến bạn ♡</div>
     </section>
 
     <section class="memories">
-      <div class="section-heading">
-        <p class="eyebrow">LƯU GIỮ ĐIỀU ĐẸP ĐẼ</p>
-        <h2>Hạnh phúc là những điều giản dị</h2>
-        <p>Những khoảnh khắc nhỏ cũng có thể làm một ngày trở nên thật đặc biệt.</p>
-      </div>
-      <div class="photo-wall" id="photoWall">
-        <!-- JavaScript sẽ tạo các tấm ảnh và sắp xếp ngẫu nhiên tại đây. -->
-      </div>
+      <p class="eyebrow">LƯU GIỮ ĐIỀU ĐẸP ĐẼ</p>
+      <h2>Hạnh phúc là những điều giản dị</h2>
+      <p class="intro">Những khoảnh khắc nhỏ cũng có thể làm một ngày trở nên thật đặc biệt.</p>
+      <div class="photo-wall" id="photoWall"></div>
     </section>
-
-    <footer>
-      <span>Made with</span> <span class="footer-heart">♥</span>
-      <span>and a little bit of love</span>
-    </footer>
+    <footer>Made with <span>♥</span> and a little bit of love</footer>
   </main>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div id="toast" role="status" class="toast"></div>
   <script src="script.js"></script>
 </body>
 </html>
