@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff1f2">
+  <title>Chúc mừng 20/10 💗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="petals" aria-hidden="true"></div>
+  <main class="page">
+    <header class="hero">
+      <div class="eyebrow"><span>✿</span> 20 tháng 10 <span>✿</span></div>
+      <h1>Chúc mừng<br><span>Ngày Phụ nữ Việt Nam</span></h1>
+      <p class="intro">Gửi một chút yêu thương đến những người phụ nữ tuyệt vời.</p>
+
+      <form class="wish-form" id="wishForm">
+        <label for="recipientName">Lời chúc này dành tặng ai?</label>
+        <div class="input-row">
+          <input id="recipientName" name="recipientName" type="text"
+                 placeholder="Nhập tên người nhận..." maxlength="40"
+                 autocomplete="off" required>
+          <button type="submit">Gửi lời chúc <span aria-hidden="true">♡</span></button>
+        </div>
+        <p class="form-note">Một cái tên, thật nhiều yêu thương.</p>
+      </form>
+    </header>
+
+    <section class="wish-card" id="wishCard" aria-live="polite">
+      <div class="card-flower flower-left">✿</div>
+      <div class="heart">♥</div>
+      <p class="wish-kicker">Một lời nhắn nhỏ dành cho</p>
+      <h2 id="wishTitle">Bạn thật đặc biệt!</h2>
+      <p id="wishText">Chúc bạn luôn rạng rỡ, bình an và được yêu thương mỗi ngày.</p>
+      <div class="card-bottom">Gửi bạn tất cả những điều dịu dàng nhất <span>♡</span></div>
+      <div class="card-flower flower-right">✿</div>
+    </section>
+
+    <section class="memories">
+      <div class="section-heading">
+        <p class="eyebrow">LƯU GIỮ ĐIỀU ĐẸP ĐẼ</p>
+        <h2>Hạnh phúc là những điều giản dị</h2>
+        <p>Những khoảnh khắc nhỏ cũng có thể làm một ngày trở nên thật đặc biệt.</p>
+      </div>
+      <div class="photo-wall" id="photoWall">
+        <!-- JavaScript sẽ tạo các tấm ảnh và sắp xếp ngẫu nhiên tại đây. -->
+      </div>
+    </section>
+
+    <footer>
+      <span>Made with</span> <span class="footer-heart">♥</span>
+      <span>and a little bit of love</span>
+    </footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
